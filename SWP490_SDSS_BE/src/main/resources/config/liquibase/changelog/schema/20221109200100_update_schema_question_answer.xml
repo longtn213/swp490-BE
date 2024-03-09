@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="longtn" id="202211092001-3">
+        <dropForeignKeyConstraint
+            baseTableName="question_answer"
+            constraintName="FK_QUESTION_ANSWER_ON_QUESTION"/>
+        <dropForeignKeyConstraint
+            baseTableName="question_answer"
+            constraintName="FK_QUESTION_ANSWER_ON_OPTION"/>
+    </changeSet>
+
+    <changeSet id="202211092001-1" author="longtn">
+        <dropColumn columnName="question_id" tableName="question_answer"/>
+        <dropColumn columnName="option_id" tableName="question_answer"/>
+    </changeSet>
+
+    <changeSet id="202211092001-2" author="longtn">
+        <addColumn tableName="question_answer">
+            <column name="text_question" type="varchar(1000)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

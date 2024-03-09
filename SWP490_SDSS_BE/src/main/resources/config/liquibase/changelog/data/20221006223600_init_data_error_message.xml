@@ -1,0 +1,144 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210062236-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'CATEGORY_ALREADY_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="CATEGORY_ALREADY_EXIST"/>
+            <column name="return_code" value="4001000"/>
+            <column name="message_vi"
+                    value="Loại service {0} đã tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210102058-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'BRANCH_ALREADY_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="BRANCH_ALREADY_EXIST"/>
+            <column name="return_code" value="4001100"/>
+            <column name="message_vi"
+                    value="Chi nhánh {0} đã tồn tại trong hệ thống"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210131533-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'EQUIPMENT_TYPE_ALREADY_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="EQUIPMENT_TYPE_ALREADY_EXIST"/>
+            <column name="return_code" value="4001200"/>
+            <column name="message_vi"
+                    value="Loại thiết bị {0} đã tồn tại trong hệ thống"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="2022101745-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'SPA_SERVICE_ALREADY_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="SPA_SERVICE_ALREADY_EXIST"/>
+            <column name="return_code" value="4001300"/>
+            <column name="message_vi"
+                    value="Dịch vụ {0} đã tồn tại trong hệ thống"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210141111-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'BRANCH_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="BRANCH_NOT_EXIST"/>
+            <column name="return_code" value="4001400"/>
+            <column name="message_vi"
+                    value="Chi nhánh {0} không tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210141111-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'SPA_SERVICE_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="SPA_SERVICE_NOT_EXIST"/>
+            <column name="return_code" value="4001301"/>
+            <column name="message_vi"
+                    value="Dịch vụ {0} không tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210162300-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'CATEGORY_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="CATEGORY_NOT_EXIST"/>
+            <column name="return_code" value="4001001"/>
+            <column name="message_vi"
+                    value="Loại dịch vụ {0} không tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210162322-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'EQUIPMENT_TYPE_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="EQUIPMENT_TYPE_NOT_EXIST"/>
+            <column name="return_code" value="4001201"/>
+            <column name="message_vi"
+                    value="Loại thiết bị {0} không tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

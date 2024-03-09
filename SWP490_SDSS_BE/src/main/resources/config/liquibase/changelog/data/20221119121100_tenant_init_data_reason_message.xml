@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202211191259-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM reason_message
+                WHERE code = 'CANCEL_APPOINTMENT_003';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="reason_message">
+            <column name="code" value="CANCEL_APPOINTMENT_003"/>
+            <column name="title" value="Khách đặt nhầm"/>
+            <column name="description" value="Khách đặt nhầm"/>
+            <column name="type_id" valueComputed="(select id from reason_message_type where code = 'CANCEL')"/>
+            <column name="require_note" valueBoolean="false"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211191259-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM reason_message
+                WHERE code = 'CANCEL_APPOINTMENT_004';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="reason_message">
+            <column name="code" value="CANCEL_APPOINTMENT_004"/>
+            <column name="title" value="Lý do khác"/>
+            <column name="description" value="Lý do khác"/>
+            <column name="type_id" valueComputed="(select id from reason_message_type where code = 'CANCEL')"/>
+            <column name="require_note" valueBoolean="false"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202212042237-1">
+        <update tableName="reason_message">
+            <column name="require_note" valueBoolean="true"></column>
+            <where>code='CANCEL_APPOINTMENT_004'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

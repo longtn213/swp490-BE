@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1664992146487-1" author="trinh.pham_onemount (generated)">
+        <createTable tableName="appointment_master">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_appointment_master"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="expected_start_time" type="DATETIME"/>
+            <column name="expected_end_time" type="DATETIME"/>
+            <column name="actual_start_time" type="DATETIME"/>
+            <column name="actual_end_time" type="DATETIME"/>
+            <column name="cancel_time" type="DATETIME"/>
+            <column name="cancel_by" type="VARCHAR(255)"/>
+            <column name="total" type="DOUBLE"/>
+            <column name="pay_amount" type="DOUBLE"/>
+            <column name="branch_id" type="BIGINT"/>
+            <column name="customer_id" type="BIGINT"/>
+            <column name="session_id" type="BIGINT"/>
+            <column name="status_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-2" author="trinh.pham_onemount (generated)">
+        <createTable tableName="appointment_service">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_appointment_service"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="expected_start_time" type="DATETIME"/>
+            <column name="expected_end_time" type="DATETIME"/>
+            <column name="cancel_time" type="DATETIME"/>
+            <column name="cancel_by" type="VARCHAR(255)"/>
+            <column name="total" type="DOUBLE"/>
+            <column name="pay_amount" type="DOUBLE"/>
+            <column name="appointment_master_id" type="BIGINT"/>
+            <column name="service_id" type="BIGINT"/>
+            <column name="status_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-3" author="trinh.pham_onemount (generated)">
+        <createTable tableName="appointment_service_specialist">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_appointment_service_specialist"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="start_time" type="DATETIME"/>
+            <column name="end_time" type="DATETIME"/>
+            <column name="specialist_id" type="BIGINT"/>
+            <column name="appointment_service_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-4" author="trinh.pham_onemount (generated)">
+        <createTable tableName="equipment_branch">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_equipment_branch"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="equipment_type_id" type="BIGINT"/>
+            <column name="branch_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-5" author="trinh.pham_onemount (generated)">
+        <createTable tableName="equipment_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_equipment_type"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-6" author="trinh.pham_onemount (generated)">
+        <createTable tableName="feedback">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_feedback"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="point" type="FLOAT"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="ref_id" type="BIGINT"/>
+            <column name="ref_type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-7" author="trinh.pham_onemount (generated)">
+        <createTable tableName="file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_file"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="metadata" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="storage_source" type="VARCHAR(255)"/>
+            <column name="upload_status" type="VARCHAR(255)"/>
+            <column name="fail_reason" type="VARCHAR(255)"/>
+            <column name="start_upload_time" type="DATETIME"/>
+            <column name="finish_upload_time" type="DATETIME"/>
+            <column name="url" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-8" author="trinh.pham_onemount (generated)">
+        <createTable tableName="lookup">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_lookup"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="lookup_key" type="VARCHAR(255)"/>
+            <column name="lookup_value" type="VARCHAR(255)"/>
+            <column name="display_val" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-9" author="trinh.pham_onemount (generated)">
+        <createTable tableName="notification">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_notification"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="message" type="VARCHAR(255)"/>
+            <column name="deep_link" type="VARCHAR(255)"/>
+            <column defaultValueBoolean="false" name="is_seen" type="BIT(1)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-10" author="trinh.pham_onemount (generated)">
+        <createTable tableName="notification_user">
+            <column name="notification_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_notification_user"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_notification_user"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-11" author="trinh.pham_onemount (generated)">
+        <createTable tableName="option">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_option"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="option" type="VARCHAR(255)"/>
+            <column name="order" type="INT"/>
+            <column name="question_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-12" author="trinh.pham_onemount (generated)">
+        <createTable tableName="post">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_post"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-13" author="trinh.pham_onemount (generated)">
+        <createTable tableName="question_answer">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_question_answer"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="text_answer" type="VARCHAR(255)"/>
+            <column name="question_id" type="BIGINT"/>
+            <column name="option_id" type="BIGINT"/>
+            <column name="result_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-14" author="trinh.pham_onemount (generated)">
+        <createTable tableName="reason_mapping">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_reason_mapping"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="ref_id" type="BIGINT"/>
+            <column name="ref_type" type="VARCHAR(255)"/>
+            <column name="action_type" type="VARCHAR(255)"/>
+            <column name="reason_note" type="VARCHAR(255)"/>
+            <column name="reason_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-15" author="trinh.pham_onemount (generated)">
+        <createTable tableName="reason_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_reason_message"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column defaultValueBoolean="true" name="is_active" type="BIT(1)"/>
+            <column defaultValueBoolean="false" name="require_note" type="BIT(1)"/>
+            <column name="type_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-16" author="trinh.pham_onemount (generated)">
+        <createTable tableName="reason_message_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_reason_message_type"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-17" author="trinh.pham_onemount (generated)">
+        <createTable tableName="sca_form">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_sca_form"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-18" author="trinh.pham_onemount (generated)">
+        <createTable tableName="sca_question">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_sca_question"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="question" type="VARCHAR(255)"/>
+            <column name="order" type="INT"/>
+            <column defaultValueBoolean="true" name="is_required" type="BIT(1)"/>
+            <column name="form_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-19" author="trinh.pham_onemount (generated)">
+        <createTable tableName="sca_result">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_sca_result"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="comment" type="VARCHAR(255)"/>
+            <column name="customer_id" type="BIGINT"/>
+            <column name="specialist_id" type="BIGINT"/>
+            <column name="status_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-20" author="trinh.pham_onemount (generated)">
+        <createTable tableName="sca_result_service">
+            <column name="sca_result_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_sca_result_service"/>
+            </column>
+            <column name="service_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_sca_result_service"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-21" author="trinh.pham_onemount (generated)">
+        <createTable tableName="session">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_session"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="order" type="INT"/>
+            <column name="expected_start_time" type="DATETIME"/>
+            <column name="course_id" type="BIGINT"/>
+            <column name="service_id" type="BIGINT"/>
+            <column name="status_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-22" author="trinh.pham_onemount (generated)">
+        <createTable tableName="spa_course">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_spa_course"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="start_time" type="DATETIME"/>
+            <column name="end_time" type="DATETIME"/>
+            <column name="cancel_time" type="DATETIME"/>
+            <column name="cancel_by" type="VARCHAR(255)"/>
+            <column name="branch_id" type="BIGINT"/>
+            <column name="status_id" type="BIGINT"/>
+            <column name="customer_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-23" author="trinh.pham_onemount (generated)">
+        <createTable tableName="voucher">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_voucher"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="DATETIME"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664992146487-24" author="trinh.pham_onemount (generated)">
+        <addUniqueConstraint columnNames="code" constraintName="uc_equipment_type_code" tableName="equipment_type"/>
+    </changeSet>
+    <changeSet id="1664992146487-25" author="trinh.pham_onemount (generated)">
+        <addUniqueConstraint columnNames="code" constraintName="uc_reason_message_code" tableName="reason_message"/>
+    </changeSet>
+    <changeSet id="1664992146487-26" author="trinh.pham_onemount (generated)">
+        <addUniqueConstraint columnNames="code" constraintName="uc_reason_message_type_code"
+                             tableName="reason_message_type"/>
+    </changeSet>
+    <changeSet id="1664992146487-27" author="trinh.pham_onemount (generated)">
+        <addUniqueConstraint columnNames="code" constraintName="uc_sca_form_code" tableName="sca_form"/>
+    </changeSet>
+    <changeSet id="1664992146487-28" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="appointment_master"
+                                 constraintName="FK_APPOINTMENT_MASTER_ON_BRANCH" referencedColumnNames="id"
+                                 referencedTableName="branch"/>
+    </changeSet>
+    <changeSet id="1664992146487-29" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="appointment_master"
+                                 constraintName="FK_APPOINTMENT_MASTER_ON_CUSTOMER" referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-30" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="session_id" baseTableName="appointment_master"
+                                 constraintName="FK_APPOINTMENT_MASTER_ON_SESSION" referencedColumnNames="id"
+                                 referencedTableName="session"/>
+    </changeSet>
+    <changeSet id="1664992146487-31" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="status_id" baseTableName="appointment_master"
+                                 constraintName="FK_APPOINTMENT_MASTER_ON_STATUS" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-32" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="appointment_master_id" baseTableName="appointment_service"
+                                 constraintName="FK_APPOINTMENT_SERVICE_ON_APPOINTMENT_MASTER"
+                                 referencedColumnNames="id" referencedTableName="appointment_master"/>
+    </changeSet>
+    <changeSet id="1664992146487-33" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="service_id" baseTableName="appointment_service"
+                                 constraintName="FK_APPOINTMENT_SERVICE_ON_SERVICE" referencedColumnNames="id"
+                                 referencedTableName="service"/>
+    </changeSet>
+    <changeSet id="1664992146487-34" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="status_id" baseTableName="appointment_service"
+                                 constraintName="FK_APPOINTMENT_SERVICE_ON_STATUS" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-35" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="appointment_service_id" baseTableName="appointment_service_specialist"
+                                 constraintName="FK_APPOINTMENT_SERVICE_SPECIALIST_ON_APPOINTMENT_SERVICE"
+                                 referencedColumnNames="id" referencedTableName="appointment_service"/>
+    </changeSet>
+    <changeSet id="1664992146487-36" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="specialist_id" baseTableName="appointment_service_specialist"
+                                 constraintName="FK_APPOINTMENT_SERVICE_SPECIALIST_ON_SPECIALIST"
+                                 referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-37" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="equipment_branch"
+                                 constraintName="FK_EQUIPMENT_BRANCH_ON_BRANCH" referencedColumnNames="id"
+                                 referencedTableName="branch"/>
+    </changeSet>
+    <changeSet id="1664992146487-38" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="equipment_type_id" baseTableName="equipment_branch"
+                                 constraintName="FK_EQUIPMENT_BRANCH_ON_EQUIPMENT_TYPE" referencedColumnNames="id"
+                                 referencedTableName="equipment_type"/>
+    </changeSet>
+    <changeSet id="1664992146487-39" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="question_id" baseTableName="option"
+                                 constraintName="FK_OPTION_ON_QUESTION" referencedColumnNames="id"
+                                 referencedTableName="sca_question"/>
+    </changeSet>
+    <changeSet id="1664992146487-40" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="option_id" baseTableName="question_answer"
+                                 constraintName="FK_QUESTION_ANSWER_ON_OPTION" referencedColumnNames="id"
+                                 referencedTableName="option"/>
+    </changeSet>
+    <changeSet id="1664992146487-41" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="question_id" baseTableName="question_answer"
+                                 constraintName="FK_QUESTION_ANSWER_ON_QUESTION" referencedColumnNames="id"
+                                 referencedTableName="sca_question"/>
+    </changeSet>
+    <changeSet id="1664992146487-42" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="result_id" baseTableName="question_answer"
+                                 constraintName="FK_QUESTION_ANSWER_ON_RESULT" referencedColumnNames="id"
+                                 referencedTableName="sca_result"/>
+    </changeSet>
+    <changeSet id="1664992146487-43" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="reason_id" baseTableName="reason_mapping"
+                                 constraintName="FK_REASON_MAPPING_ON_REASON" referencedColumnNames="id"
+                                 referencedTableName="reason_message"/>
+    </changeSet>
+    <changeSet id="1664992146487-44" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="reason_message"
+                                 constraintName="FK_REASON_MESSAGE_ON_TYPE" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-45" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="form_id" baseTableName="sca_question"
+                                 constraintName="FK_SCA_QUESTION_ON_FORM" referencedColumnNames="id"
+                                 referencedTableName="sca_form"/>
+    </changeSet>
+    <changeSet id="1664992146487-46" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="sca_result"
+                                 constraintName="FK_SCA_RESULT_ON_CUSTOMER" referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-47" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="specialist_id" baseTableName="sca_result"
+                                 constraintName="FK_SCA_RESULT_ON_SPECIALIST" referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-48" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="status_id" baseTableName="sca_result"
+                                 constraintName="FK_SCA_RESULT_ON_STATUS" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-49" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="course_id" baseTableName="session"
+                                 constraintName="FK_SESSION_ON_COURSE" referencedColumnNames="id"
+                                 referencedTableName="spa_course"/>
+    </changeSet>
+    <changeSet id="1664992146487-50" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="service_id" baseTableName="session"
+                                 constraintName="FK_SESSION_ON_SERVICE" referencedColumnNames="id"
+                                 referencedTableName="service"/>
+    </changeSet>
+    <changeSet id="1664992146487-51" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="status_id" baseTableName="session"
+                                 constraintName="FK_SESSION_ON_STATUS" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-52" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="spa_course"
+                                 constraintName="FK_SPA_COURSE_ON_BRANCH" referencedColumnNames="id"
+                                 referencedTableName="branch"/>
+    </changeSet>
+    <changeSet id="1664992146487-53" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="spa_course"
+                                 constraintName="FK_SPA_COURSE_ON_CUSTOMER" referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-54" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="status_id" baseTableName="spa_course"
+                                 constraintName="FK_SPA_COURSE_ON_STATUS" referencedColumnNames="id"
+                                 referencedTableName="lookup"/>
+    </changeSet>
+    <changeSet id="1664992146487-55" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="notification_id" baseTableName="notification_user"
+                                 constraintName="fk_notuse_on_notification" referencedColumnNames="id"
+                                 referencedTableName="notification"/>
+    </changeSet>
+    <changeSet id="1664992146487-56" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="notification_user"
+                                 constraintName="fk_notuse_on_user" referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1664992146487-57" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="sca_result_id" baseTableName="sca_result_service"
+                                 constraintName="fk_scaresser_on_sca_result" referencedColumnNames="id"
+                                 referencedTableName="sca_result"/>
+    </changeSet>
+    <changeSet id="1664992146487-58" author="trinh.pham_onemount (generated)">
+        <addForeignKeyConstraint baseColumnNames="service_id" baseTableName="sca_result_service"
+                                 constraintName="fk_scaresser_on_service" referencedColumnNames="id"
+                                 referencedTableName="service"/>
+    </changeSet>
+
+</databaseChangeLog>

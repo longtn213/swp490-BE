@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="longtn" id="202211211812-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'SCA_RESULT_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="SCA_RESULT_NOT_EXIST"/>
+            <column name="return_code" value="400704"/>
+            <column name="message_vi"
+                    value="Form trả lời không tồn tại.Vui lòng kiểm tra lại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

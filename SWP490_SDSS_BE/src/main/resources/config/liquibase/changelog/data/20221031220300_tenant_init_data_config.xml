@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210301550-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'APPOINTMENT_MASTER_REQUIRE_CONFIRMATION';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="config_key" value="APPOINTMENT_MASTER_REQUIRE_CONFIRMATION"/>
+            <column name="config_value" value="false"/>
+            <column name="description"
+                    value="Yêu cầu xác nhận với khách hàng sau khi tạo lịch hẹn"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

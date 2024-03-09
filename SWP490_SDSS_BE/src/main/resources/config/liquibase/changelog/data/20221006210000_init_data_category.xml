@@ -1,0 +1,84 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210062100-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'SCREENING_CONSULT';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="SCREENING_CONSULT"/>
+            <column name="name" value="Soi và tư vấn da"/>
+            <column name="description" value="Soi và tư vấn da"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-06 21:00:35"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-06 21:00:35"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210062100-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'ACNE_SKIN_CARE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="ACNE_SKIN_CARE"/>
+            <column name="name" value="Chăm sóc da mụn"/>
+            <column name="description" value="Chăm sóc da mụn"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-06 21:00:35"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-06 21:00:35"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210062100-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'MELASMA_SKIN_CARE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="MELASMA_SKIN_CARE"/>
+            <column name="name" value="Chăm sóc da thâm, nám"/>
+            <column name="description" value="Chăm sóc da thâm, nám"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-06 21:00:35"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-06 21:00:35"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtn" id="202212102257-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'Restore/Anti_Aging_Skin';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="RESTORE/ANTI_AGING_SKIN"/>
+            <column name="name" value="Phục hồi/Chống lão hoá da"/>
+            <column name="description" value="Phục hồi/Chống lão hoá da"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-12-10 23:00:35"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-12-10 23:00:35"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

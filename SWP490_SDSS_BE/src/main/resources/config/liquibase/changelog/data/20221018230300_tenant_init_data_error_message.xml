@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210182303-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'REASON_TYPE_IS_INVALID';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="REASON_TYPE_IS_INVALID"/>
+            <column name="return_code" value="4001500"/>
+            <column name="message_vi"
+                    value="Loại lý do {0} không tồn tại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202211281026-1">
+        <update tableName="config_data">
+            <column name="allow_update" valueBoolean="true"></column>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281215-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'DURATION_AUTO_GEN_APPOINTMENT_TRACKING_TIME';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="config_key" value="DURATION_AUTO_GEN_APPOINTMENT_TRACKING_TIME"/>
+            <column name="config_value" value="365"/>
+            <column name="allow_update" valueBoolean="false"/>
+            <column name="description"
+                    value="Dữ liệu tracking thời tự động tạo mới (đơn vị ngày)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281036-2">
+        <update tableName="config_data">
+            <column name="allow_update" valueBoolean="true"></column>
+            <where>config_key='PERIOD_BETWEEN_APPOINTMENT'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281125-1">
+        <update tableName="config_data">
+            <column name="type" value="datetime"></column>
+            <where>config_key='START_WORKING_TIME_IN_DAY'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281125-2">
+        <update tableName="config_data">
+            <column name="type" value="datetime"></column>
+            <where>config_key='END_WORKING_TIME_IN_DAY'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281404-1">
+        <update tableName="config_data">
+            <column name="allow_update" valueBoolean="false"></column>
+            <where>config_key='PERIOD_BETWEEN_APPOINTMENT'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281409-1">
+        <update tableName="config_data">
+            <column name="type" value="number"></column>
+            <where>config_key='MAX_CUSTOMER_A_TIME'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281409-2">
+        <update tableName="config_data">
+            <column name="type" value="number"></column>
+            <where>config_key='MAX_PERIOD_BOOKING_TIME'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281408-3">
+        <update tableName="config_data">
+            <column name="type" value="time"></column>
+            <where>config_key='START_WORKING_TIME_IN_DAY'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281408-4">
+        <update tableName="config_data">
+            <column name="type" value="time"></column>
+            <where>config_key='END_WORKING_TIME_IN_DAY'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211281815-20">
+        <update tableName="config_data">
+            <column name="config_value" value="90"></column>
+            <where>config_key='DURATION_AUTO_GEN_APPOINTMENT_TRACKING_TIME'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202301021137-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'AM_INTERVAL_ALLOW_LATE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="config_key" value="AM_INTERVAL_ALLOW_LATE"/>
+            <column name="config_value" value="15"/>
+            <column name="allow_update" valueBoolean="true"/>
+            <column name="description"
+                    value="Khoảng thời gian (phút) cho phép khách đến muộn so với thời gian bắt đầu dự kiến của lịch hẹn"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+

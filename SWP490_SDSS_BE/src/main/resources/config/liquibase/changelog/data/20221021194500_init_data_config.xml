@@ -1,0 +1,136 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210211945-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'MAX_CUSTOMER_A_TIME';
+            </sqlCheck>
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="config_key" value="MAX_CUSTOMER_A_TIME"/>
+            <column name="config_value" value="14"/>
+            <column name="description"
+                    value="Số lượng khách hàng tối đa cơ sở có khả năng phục vụ tại 1 thời điểm bất kì"/>
+            <column name="branch_id" valueComputed="(select id from branch where code = 'SKIN_WISDOM_YEN_LANG')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210211945-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'PERIOD_BETWEEN_APPOINTMENT';
+            </sqlCheck>
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="config_key" value="PERIOD_BETWEEN_APPOINTMENT"/>
+            <column name="config_value" value="15"/>
+            <column name="description"
+                    value="Thời gian giữa các mốc đặt lịch (đơn vị phút)"/>
+            <column name="branch_id" valueComputed="(select id from branch where code = 'SKIN_WISDOM_YEN_LANG')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210211945-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'MAX_PERIOD_BOOKING_TIME';
+            </sqlCheck>
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="config_key" value="MAX_PERIOD_BOOKING_TIME"/>
+            <column name="config_value" value="7"/>
+            <column name="description"
+                    value="Thời gian đặt trước tối đa (đơn vị ngày)"/>
+            <column name="branch_id" valueComputed="(select id from branch where code = 'SKIN_WISDOM_YEN_LANG')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210211945-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'START_WORKING_TIME_IN_DAY';
+            </sqlCheck>
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="config_key" value="START_WORKING_TIME_IN_DAY"/>
+            <column name="config_value" value="09:30:00"/>
+            <column name="description"
+                    value="Giờ vào làm (dạng hh:mm:ss)"/>
+            <column name="branch_id" valueComputed="(select id from branch where code = 'SKIN_WISDOM_YEN_LANG')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210211945-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM config_data
+                WHERE config_key = 'END_WORKING_TIME_IN_DAY';
+            </sqlCheck>
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="config_data">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="config_key" value="END_WORKING_TIME_IN_DAY"/>
+            <column name="config_value" value="21:30:00"/>
+            <column name="description"
+                    value="Giờ tan làm (dạng hh:mm:ss)"/>
+            <column name="branch_id" valueComputed="(select id from branch where code = 'SKIN_WISDOM_YEN_LANG')"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+

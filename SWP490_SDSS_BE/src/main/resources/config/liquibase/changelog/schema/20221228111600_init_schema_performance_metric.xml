@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="202212281117-1" author="trinhpk">
+        <createTable tableName="performance_metric">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="time" type="datetime"/>
+            <column name="place_gmv" type="double"/>
+            <column name="done_gmv" type="double"/>
+            <column name="place_appointment" type="int"/>
+            <column name="cancelled_sales" type="double"/>
+            <column name="cancelled_appointment" type="double"/>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="datetime(6)"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="datetime(6)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="202301082339-1" author="trinhpk">
+        <addColumn tableName="performance_metric">
+            <column name="done_appointment" type="bigint"></column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202301082339-4">
+        <addAutoIncrement columnDataType="bigint"
+                          columnName="id"
+                          startWith="1"
+                          tableName="performance_metric"/>
+    </changeSet>
+
+    <changeSet id="202301101712-1" author="trinhpk">
+        <addColumn tableName="performance_metric">
+            <column name="branch_id" type="bigint"></column>
+        </addColumn>
+        <addForeignKeyConstraint baseColumnNames="branch_id"
+                                 baseTableName="performance_metric"
+                                 constraintName="FK_PERFORMANCE_METRIC_ON_BRANCH"
+                                 referencedColumnNames="id"
+                                 referencedTableName="branch"/>
+    </changeSet>
+</databaseChangeLog>

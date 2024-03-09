@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="202212131958-1" author="trinhpk">
+        <addColumn tableName="appointment_master">
+            <column name="confirm_message_sent" defaultValueBoolean="false" type="BIT(1)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="202201082210-1" author="trinhpk">
+        <addColumn tableName="appointment_master">
+            <column name="payment_method" type="varchar(100)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="202201082210-2" author="trinhpk">
+        <addColumn tableName="appointment_master">
+            <column name="booked_count" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="202201082210-3" author="longtn">
+        <dropColumn tableName="appointment_master">
+            <column name="booked_count"/>
+        </dropColumn>
+    </changeSet>
+</databaseChangeLog>

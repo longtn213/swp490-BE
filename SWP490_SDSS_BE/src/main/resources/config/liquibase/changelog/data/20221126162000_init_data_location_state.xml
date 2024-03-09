@@ -1,0 +1,1264 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <changeSet author="trinhpk" id="202211261622-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'AN_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="An Giang"/>
+            <column name="division_code" value="AN_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BA_RIA_-_VUNG_TAU'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bà Rịa - Vũng Tàu"/>
+            <column name="division_code" value="BA_RIA_-_VUNG_TAU"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BINH_DUONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bình Dương"/>
+            <column name="division_code" value="BINH_DUONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BINH_PHUOC'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bình Phước"/>
+            <column name="division_code" value="BINH_PHUOC"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BINH_THUAN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bình Thuận"/>
+            <column name="division_code" value="BINH_THUAN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BINH_ĐINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bình Định"/>
+            <column name="division_code" value="BINH_ĐINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BAC_LIEU'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bạc Liêu"/>
+            <column name="division_code" value="BAC_LIEU"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BAC_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bắc Giang"/>
+            <column name="division_code" value="BAC_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BAC_KAN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bắc Kạn"/>
+            <column name="division_code" value="BAC_KAN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BAC_NINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bắc Ninh"/>
+            <column name="division_code" value="BAC_NINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-11">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'BEN_TRE'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Bến Tre"/>
+            <column name="division_code" value="BEN_TRE"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-12">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'CAO_BANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Cao Bằng"/>
+            <column name="division_code" value="CAO_BANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-13">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'CA_MAU'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Cà Mau"/>
+            <column name="division_code" value="CA_MAU"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-14">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'CAN_THO'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Cần Thơ"/>
+            <column name="division_code" value="CAN_THO"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-15">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'GIA_LAI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Gia Lai"/>
+            <column name="division_code" value="GIA_LAI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-16">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HA_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hà Giang"/>
+            <column name="division_code" value="HA_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-17">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HA_NAM'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hà Nam"/>
+            <column name="division_code" value="HA_NAM"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-18">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HA_NOI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hà Nội"/>
+            <column name="division_code" value="HA_NOI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-19">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HA_TINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hà Tĩnh"/>
+            <column name="division_code" value="HA_TINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-20">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HOA_BINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hòa Bình"/>
+            <column name="division_code" value="HOA_BINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-21">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUNG_YEN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hưng Yên"/>
+            <column name="division_code" value="HUNG_YEN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-22">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HAI_DUONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hải Dương"/>
+            <column name="division_code" value="HAI_DUONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-23">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HAI_PHONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hải Phòng"/>
+            <column name="division_code" value="HAI_PHONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-24">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HAU_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Hậu Giang"/>
+            <column name="division_code" value="HAU_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-25">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'KHANH_HOA'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Khánh Hòa"/>
+            <column name="division_code" value="KHANH_HOA"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-26">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'KIEN_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Kiên Giang"/>
+            <column name="division_code" value="KIEN_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-27">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'KON_TUM'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Kon Tum"/>
+            <column name="division_code" value="KON_TUM"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-28">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'LAI_CHAU'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Lai Châu"/>
+            <column name="division_code" value="LAI_CHAU"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-29">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'LONG_AN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Long An"/>
+            <column name="division_code" value="LONG_AN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-30">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'LAO_CAI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Lào Cai"/>
+            <column name="division_code" value="LAO_CAI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-31">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'LAM_ĐONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Lâm Đồng"/>
+            <column name="division_code" value="LAM_ĐONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-32">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'LANG_SON'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Lạng Sơn"/>
+            <column name="division_code" value="LANG_SON"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-33">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'NAM_ĐINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Nam Định"/>
+            <column name="division_code" value="NAM_ĐINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-34">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'NGHE_AN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Nghệ An"/>
+            <column name="division_code" value="NGHE_AN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-35">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'NINH_BINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Ninh Bình"/>
+            <column name="division_code" value="NINH_BINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-36">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'NINH_THUAN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Ninh Thuận"/>
+            <column name="division_code" value="NINH_THUAN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-37">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'PHU_THO'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phú Thọ"/>
+            <column name="division_code" value="PHU_THO"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-38">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'PHU_YEN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phú Yên"/>
+            <column name="division_code" value="PHU_YEN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-39">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'QUANG_BINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Quảng Bình"/>
+            <column name="division_code" value="QUANG_BINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-40">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'QUANG_NAM'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Quảng Nam"/>
+            <column name="division_code" value="QUANG_NAM"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-41">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'QUANG_NGAI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Quảng Ngãi"/>
+            <column name="division_code" value="QUANG_NGAI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-42">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'QUANG_NINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Quảng Ninh"/>
+            <column name="division_code" value="QUANG_NINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-43">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'QUANG_TRI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Quảng Trị"/>
+            <column name="division_code" value="QUANG_TRI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-44">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'SOC_TRANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Sóc Trăng"/>
+            <column name="division_code" value="SOC_TRANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-45">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'SON_LA'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Sơn La"/>
+            <column name="division_code" value="SON_LA"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-46">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'TP._HO_CHI_MINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="TP. Hồ Chí Minh"/>
+            <column name="division_code" value="TP._HO_CHI_MINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-47">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_HOA'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thanh Hóa"/>
+            <column name="division_code" value="THANH_HOA"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-48">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THAI_BINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thái Bình"/>
+            <column name="division_code" value="THAI_BINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-49">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THAI_NGUYEN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thái Nguyên"/>
+            <column name="division_code" value="THAI_NGUYEN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-50">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THUA_THIEN_HUE'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thừa Thiên Huế"/>
+            <column name="division_code" value="THUA_THIEN_HUE"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-51">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'TIEN_GIANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Tiền Giang"/>
+            <column name="division_code" value="TIEN_GIANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-52">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'TRA_VINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Trà Vinh"/>
+            <column name="division_code" value="TRA_VINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-53">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'TUYEN_QUANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Tuyên Quang"/>
+            <column name="division_code" value="TUYEN_QUANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-54">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'TAY_NINH'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Tây Ninh"/>
+            <column name="division_code" value="TAY_NINH"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-55">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'VINH_LONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Vĩnh Long"/>
+            <column name="division_code" value="VINH_LONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-56">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'VINH_PHUC'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Vĩnh Phúc"/>
+            <column name="division_code" value="VINH_PHUC"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-57">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'YEN_BAI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Yên Bái"/>
+            <column name="division_code" value="YEN_BAI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-58">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐIEN_BIEN'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Điện Biên"/>
+            <column name="division_code" value="ĐIEN_BIEN"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-59">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐA_NANG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Đà Nẵng"/>
+            <column name="division_code" value="ĐA_NANG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-60">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐAK_LAK'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Đắk Lắk"/>
+            <column name="division_code" value="ĐAK_LAK"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-61">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐAK_NONG'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Đắk Nông"/>
+            <column name="division_code" value="ĐAK_NONG"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-62">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐONG_NAI'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Đồng Nai"/>
+            <column name="division_code" value="ĐONG_NAI"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211261622-63">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'ĐONG_THAP'
+                  and division_level = 'STATE'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Đồng Tháp"/>
+            <column name="division_code" value="ĐONG_THAP"/>
+            <column name="division_level" value="STATE"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

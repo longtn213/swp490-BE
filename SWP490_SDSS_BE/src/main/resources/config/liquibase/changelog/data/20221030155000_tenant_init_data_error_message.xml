@@ -1,0 +1,57 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210301550-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'INPUT_INVALID';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="INPUT_INVALID"/>
+            <column name="return_code" value="4001720"/>
+            <column name="message_vi"
+                    value="Dữ liệu đầu vào không hợp lệ"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+    <changeSet author="trinhpk" id="202211071956-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'ACCOUNT_EXISTED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="ACCOUNT_EXISTED"/>
+            <column name="return_code" value="4001650"/>
+            <column name="message_vi"
+                    value="Địa chỉ email hoặc số điện thoại đã tồn tại, vui lòng kiểm tra và thử lại."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+    <changeSet author="trinhpk" id="202211071956-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'USERNAME_EXISTED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="USERNAME_EXISTED"/>
+            <column name="return_code" value="4001651"/>
+            <column name="message_vi"
+                    value="Tên đăng nhập đã tồn tại, vui lòng kiểm tra và thử lại."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

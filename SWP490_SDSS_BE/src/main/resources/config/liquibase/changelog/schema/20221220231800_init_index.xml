@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="202212202318-1" author="trinhpk">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <indexExists indexName="idx_user_ref_id"/>
+            </not>
+        </preConditions>
+        <createIndex tableName="user" indexName="idx_user_ref_id">
+            <column name="ref_id"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="202212202318-2" author="trinhpk">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <indexExists indexName="idx_file_upload_status"/>
+            </not>
+        </preConditions>
+        <createIndex tableName="file" indexName="idx_file_upload_status">
+            <column name="upload_status"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="202212202318-3" author="trinhpk">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <indexExists indexName="idx_file_upload_status"/>
+            </not>
+        </preConditions>
+        <createIndex tableName="appointment_service" indexName="idx_appt_service_status_id">
+            <column name="status_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,442 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210312143-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'WAITING_FOR_CONFIRMATION';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="WAITING_FOR_CONFIRMATION"/>
+            <column name="display_val" value="Chờ xác nhận"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn chờ xác nhận (sau khi đặt lịch, chờ xác nhận với khách hàng)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'READY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="READY"/>
+            <column name="display_val" value="Chờ thực hiện"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn chờ thực hiện"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'IN_PROGRESS';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="IN_PROGRESS"/>
+            <column name="display_val" value="Đang thực hiện"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn đang thực hiện (sau khi khách hàng checkin)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'COMPLETED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="COMPLETED"/>
+            <column name="display_val" value="Hoàn thành"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn hoàn thành"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'CANCELED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="CANCELED"/>
+            <column name="display_val" value="Đã hủy"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn đã hủy"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'PENDING';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="PENDING"/>
+            <column name="display_val" value="Tạm hoãn"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn tạ̣m hoãn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_SERVICE_STATUS'
+                  and lookup_value = 'WAITING_FOR_CONFIRMATION';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_SERVICE_STATUS"/>
+            <column name="lookup_value" value="WAITING_FOR_CONFIRMATION"/>
+            <column name="display_val" value="Chờ xác nhận"/>
+            <column name="description"
+                    value="Trạng thái dịch vụ chờ xác nhận (sau khi đặt lịch, chờ xác nhận với khách hàng)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_SERVICE_STATUS'
+                  and lookup_value = 'READY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_SERVICE_STATUS"/>
+            <column name="lookup_value" value="READY"/>
+            <column name="display_val" value="Chờ thực hiện"/>
+            <column name="description"
+                    value="Trạng thái dịch vụ chờ thực hiện"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_SERVICE_STATUS'
+                  and lookup_value = 'IN_PROGRESS';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_SERVICE_STATUS"/>
+            <column name="lookup_value" value="IN_PROGRESS"/>
+            <column name="display_val" value="Đang thực hiện"/>
+            <column name="description"
+                    value="Trạng thái dịch vụ đang thực hiện"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_SERVICE_STATUS'
+                  and lookup_value = 'COMPLETED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_SERVICE_STATUS"/>
+            <column name="lookup_value" value="COMPLETED"/>
+            <column name="display_val" value="Hoàn thành"/>
+            <column name="description"
+                    value="Trạng thái dịch vụ hoàn thành"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-11">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_SERVICE_STATUS'
+                  and lookup_value = 'CANCELED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_SERVICE_STATUS"/>
+            <column name="lookup_value" value="CANCELED"/>
+            <column name="display_val" value="Đã hủy"/>
+            <column name="description"
+                    value="Trạng thái dịch vụ đã hủy"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210312143-12">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'CLOSED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="APPOINTMENT_MASTER_STATUS"/>
+            <column name="lookup_value" value="CLOSED"/>
+            <column name="display_val" value="Hoàn tất"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn hoàn tất (sau khi khách hàng hoàn tất thanh toán)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211062332-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'OVERDUE_STATUS'
+                  and lookup_value = 'OVERDUE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="OVERDUE_STATUS"/>
+            <column name="lookup_value" value="OVERDUE"/>
+            <column name="display_val" value="Quá hẹn"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn quá hẹn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211062332-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'OVERDUE_STATUS'
+                  and lookup_value = 'OVERDUE_SOON';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="OVERDUE_STATUS"/>
+            <column name="lookup_value" value="OVERDUE_SOON"/>
+            <column name="display_val" value="Sắp quá hẹn"/>
+            <column name="description"
+                    value="Trạng thái lịch hẹn sắp quá hẹn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211191143-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'ACTION_CONFIRM'
+                  and lookup_value = 'CONFIRM';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="ACTION_CONFIRM"/>
+            <column name="lookup_value" value="CONFIRM"/>
+            <column name="display_val" value="Xác nhận"/>
+            <column name="description"
+                    value="Xác nhận lịch hẹn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211191143-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'ACTION_CONFIRM'
+                  and lookup_value = 'CANCEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="ACTION_CONFIRM"/>
+            <column name="lookup_value" value="CANCEL"/>
+            <column name="display_val" value="Hủy lịch hẹn"/>
+            <column name="description"
+                    value="Hủy lịch hẹn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtn" id="202211191454-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'FORM_RESULT_STATUS'
+                  and lookup_value = 'WAITING_FOR_RESULT';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="FORM_RESULT_STATUS"/>
+            <column name="lookup_value" value="WAITING_FOR_RESULT"/>
+            <column name="display_val" value="Chưa trả lời"/>
+            <column name="description"
+                    value="Trạng thái form chưa được trả lời"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtn" id="202211191454-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'FORM_RESULT_STATUS'
+                  and lookup_value = 'DONE_ANSWER';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="FORM_RESULT_STATUS"/>
+            <column name="lookup_value" value="DONE_ANSWER"/>
+            <column name="display_val" value="Đã trả lời"/>
+            <column name="description"
+                    value="Trạng thái form đã được trả lời"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211290027-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'AVAILABLE_STATUS'
+                  and lookup_value = 'AVAILABLE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="AVAILABLE_STATUS"/>
+            <column name="lookup_value" value="AVAILABLE"/>
+            <column name="display_val" value="Khả dụng"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211290027-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'AVAILABLE_STATUS'
+                  and lookup_value = 'NOT_AVAILABLE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="AVAILABLE_STATUS"/>
+            <column name="lookup_value" value="NOT_AVAILABLE"/>
+            <column name="display_val" value="Không khả dụng"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202212052306-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'COMPLETED';
+            </sqlCheck>
+        </preConditions>
+        <update tableName="lookup">
+            <column name="display_val" value="Đã thực hiện"></column>
+            <where>lookup_key = 'APPOINTMENT_MASTER_STATUS' and lookup_value = 'COMPLETED'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202212052306-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'APPOINTMENT_MASTER_STATUS'
+                  and lookup_value = 'CLOSED';
+            </sqlCheck>
+        </preConditions>
+        <update tableName="lookup">
+            <column name="display_val" value="Hoàn tất thanh toán"></column>
+            <where>lookup_key = 'APPOINTMENT_MASTER_STATUS' and lookup_value = 'CLOSED'</where>
+        </update>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202201082158-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'PAYMENT_METHOD'
+                  and lookup_value = 'CASH';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="PAYMENT_METHOD"/>
+            <column name="lookup_value" value="CASH"/>
+            <column name="display_val" value="Tiền mặt"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202201082158-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'PAYMENT_METHOD'
+                  and lookup_value = 'BANK_ACCOUNT';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="PAYMENT_METHOD"/>
+            <column name="lookup_value" value="BANK_ACCOUNT"/>
+            <column name="display_val" value="Chuyển khoản qua tài khoản ngân hàng"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202201082158-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM lookup
+                WHERE lookup_key = 'PAYMENT_METHOD'
+                  and lookup_value = 'MOMO';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="lookup">
+            <column name="lookup_key" value="PAYMENT_METHOD"/>
+            <column name="lookup_value" value="MOMO"/>
+            <column name="display_val" value="Chuyển khoản qua ví điện tử momo"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

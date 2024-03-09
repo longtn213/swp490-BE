@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="202210131818-2"
+               author="trinh.pham_onemount (generated)">
+        <addColumn tableName="service">
+            <column name="current_price"
+                    type="DOUBLE"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="202201082210-4" author="longtn">
+        <addColumn tableName="service">
+            <column name="booked_count" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202201082210-5">
+        <addDefaultValue columnDataType="bigint"
+                         columnName="booked_count"
+                         defaultValueNumeric="0"
+                         tableName="service"/>
+    </changeSet>
+</databaseChangeLog>

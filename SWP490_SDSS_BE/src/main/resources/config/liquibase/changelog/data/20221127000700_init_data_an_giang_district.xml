@@ -1,0 +1,3438 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <changeSet author="trinhpk" id="1669482389043-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_THI_TRAN_AN_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn An Phú"/>
+            <column name="division_code" value="HUYEN_AN_PHU_THI_TRAN_AN_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_KHANH_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Khánh An"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_KHANH_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_THI_TRAN_LONG_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị Trấn Long Bình"/>
+            <column name="division_code" value="HUYEN_AN_PHU_THI_TRAN_LONG_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_KHANH_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Khánh Bình"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_KHANH_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_QUOC_THAI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Quốc Thái"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_QUOC_THAI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_NHON_HOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Nhơn Hội"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_NHON_HOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_PHU_HUU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Hữu"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_PHU_HUU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_PHU_HOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Hội"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_PHU_HOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_PHUOC_HUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phước Hưng"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_PHUOC_HUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_VINH_LOC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Lộc"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_VINH_LOC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-11">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_VINH_HAU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Hậu"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_VINH_HAU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-12">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_VINH_TRUONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Trường"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_VINH_TRUONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-13">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_VINH_HOI_ĐONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Hội Đông"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_VINH_HOI_ĐONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482389043-14">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_AN_PHU_XA_ĐA_PHUOC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Đa Phước"/>
+            <column name="division_code" value="HUYEN_AN_PHU_XA_ĐA_PHUOC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_AN_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-15">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_THI_TRAN_CAI_DAU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Cái Dầu"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_THI_TRAN_CAI_DAU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-16">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_KHANH_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Khánh Hòa"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_KHANH_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-17">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_MY_ĐUC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Đức"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_MY_ĐUC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-18">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_MY_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Phú"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_MY_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-19">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_O_LONG_VY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Ô Long Vỹ"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_O_LONG_VY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-20">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_THI_TRAN_VINH_THANH_TRUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Vĩnh Thạnh Trung"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_THI_TRAN_VINH_THANH_TRUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-21">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_THANH_MY_TAY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Thạnh Mỹ Tây"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_THANH_MY_TAY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-22">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_BINH_LONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Long"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_BINH_LONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-23">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_BINH_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Mỹ"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_BINH_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-24">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_BINH_THUY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Thủy"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_BINH_THUY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-25">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_ĐAO_HUU_CANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Đào Hữu Cảnh"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_ĐAO_HUU_CANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-26">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_BINH_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Phú"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_BINH_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482394747-27">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_PHU_XA_BINH_CHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Chánh"/>
+            <column name="division_code" value="HUYEN_CHAU_PHU_XA_BINH_CHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_PHU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-28">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_THI_TRAN_AN_CHAU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn An Châu"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_THI_TRAN_AN_CHAU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-29">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_AN_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Hòa"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_AN_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-30">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_CAN_ĐANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Cần Đăng"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_CAN_ĐANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-31">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_VINH_HANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Hanh"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_VINH_HANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-32">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_BINH_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Thạnh"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_BINH_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-33">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_THI_TRAN_VINH_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Vĩnh Bình"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_THI_TRAN_VINH_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-34">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_BINH_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Hòa"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_BINH_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-35">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_VINH_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh An"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_VINH_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-36">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_HOA_BINH_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hòa Bình Thạnh"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_HOA_BINH_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-37">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_VINH_LOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Lợi"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_VINH_LOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-38">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_VINH_NHUAN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Nhuận"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_VINH_NHUAN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-39">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_TAN_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Phú"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_TAN_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482395400-40">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHAU_THANH_XA_VINH_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Thành"/>
+            <column name="division_code" value="HUYEN_CHAU_THANH_XA_VINH_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHAU_THANH')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-41">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_THI_TRAN_CHO_MOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Chợ Mới"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_THI_TRAN_CHO_MOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-42">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_THI_TRAN_MY_LUONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Mỹ Luông"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_THI_TRAN_MY_LUONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-43">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_KIEN_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Kiến An"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_KIEN_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-44">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_MY_HOI_ĐONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Hội Đông"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_MY_HOI_ĐONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-45">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_LONG_ĐIEN_A'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long Điền A"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_LONG_ĐIEN_A"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-46">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_TAN_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tấn Mỹ"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_TAN_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-47">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_LONG_ĐIEN_B'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long Điền B"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_LONG_ĐIEN_B"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-48">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_KIEN_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Kiến Thành"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_KIEN_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-49">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_MY_HIEP'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Hiệp"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_MY_HIEP"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-50">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_MY_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ An"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_MY_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-51">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_NHON_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Nhơn Mỹ"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_NHON_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-52">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_LONG_GIANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long Giang"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_LONG_GIANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-53">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_LONG_KIEN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long Kiến"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_LONG_KIEN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-54">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_BINH_PHUOC_XUAN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Phước Xuân"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_BINH_PHUOC_XUAN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-55">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_AN_THANH_TRUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Thạnh Trung"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_AN_THANH_TRUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-56">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_HOI_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hội An"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_HOI_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-57">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_HOA_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hòa Bình"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_HOA_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396274-58">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_CHO_MOI_XA_HOA_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hòa An"/>
+            <column name="division_code" value="HUYEN_CHO_MOI_XA_HOA_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_CHO_MOI')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-59">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_THI_TRAN_PHU_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Phú Mỹ"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_THI_TRAN_PHU_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-60">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_THI_TRAN_CHO_VAM'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Chợ Vàm"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_THI_TRAN_CHO_VAM"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-61">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_LONG_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long Hoà"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_LONG_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-62">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_LONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Long"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_LONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-63">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_LAM'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Lâm"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_LAM"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-64">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_HIEP'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Hiệp"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_HIEP"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-65">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Thạnh"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-66">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_HOA_LAC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hoà Lạc"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_HOA_LAC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-67">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Thành"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-68">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú An"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-69">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_XUAN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Xuân"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_XUAN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-70">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_HIEP_XUONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Hiệp Xương"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_HIEP_XUONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-71">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Bình"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-72">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_THO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Thọ"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_THO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-73">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_PHU_HUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Hưng"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_PHU_HUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-74">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_BINH_THANH_ĐONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Thạnh Đông"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_BINH_THANH_ĐONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-75">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_TAN_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Hòa"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_TAN_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482396708-76">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_PHU_TAN_XA_TAN_TRUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Trung"/>
+            <column name="division_code" value="HUYEN_PHU_TAN_XA_TAN_TRUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_PHU_TAN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_THI_TRAN_NUI_SAP'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Núi Sập"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_THI_TRAN_NUI_SAP"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_THI_TRAN_PHU_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Phú Hoà"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_THI_TRAN_PHU_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_THI_TRAN_OC_EO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị Trấn Óc Eo"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_THI_TRAN_OC_EO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_TAY_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tây Phú"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_TAY_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_AN_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Bình"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_AN_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VINH_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Phú"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VINH_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VINH_TRACH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Trạch"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VINH_TRACH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_PHU_THUAN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Thuận"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_PHU_THUAN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VINH_CHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Chánh"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VINH_CHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_ĐINH_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Định Mỹ"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_ĐINH_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-11">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_ĐINH_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Định Thành"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_ĐINH_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-12">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_MY_PHU_ĐONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Phú Đông"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_MY_PHU_ĐONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-13">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VONG_ĐONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vọng Đông"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VONG_ĐONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-14">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VINH_KHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Khánh"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VINH_KHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-15">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_THOAI_GIANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Thoại Giang"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_THOAI_GIANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-16">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_BINH_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Bình Thành"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_BINH_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-17">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_THOAI_SON_XA_VONG_THE'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vọng Thê"/>
+            <column name="division_code" value="HUYEN_THOAI_SON_XA_VONG_THE"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_THOAI_SON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-18">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_THI_TRAN_TRI_TON'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Tri Tôn"/>
+            <column name="division_code" value="HUYEN_TRI_TON_THI_TRAN_TRI_TON"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-19">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_THI_TRAN_BA_CHUC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Ba Chúc"/>
+            <column name="division_code" value="HUYEN_TRI_TON_THI_TRAN_BA_CHUC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-20">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_LAC_QUOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Lạc Quới"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_LAC_QUOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-21">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_LE_TRI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Lê Trì"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_LE_TRI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-22">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_VINH_GIA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Gia"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_VINH_GIA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-23">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_VINH_PHUOC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Phước"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_VINH_PHUOC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-24">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_CHAU_LANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Châu Lăng"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_CHAU_LANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-25">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_LUONG_PHI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Lương Phi"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_LUONG_PHI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-26">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_LUONG_AN_TRA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Lương An Trà"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_LUONG_AN_TRA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-27">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_TA_ĐANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tà Đảnh"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_TA_ĐANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-28">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_NUI_TO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Núi Tô"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_NUI_TO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-29">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_AN_TUC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Tức"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_AN_TUC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-30">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_THI_TRAN_CO_TO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Cô Tô"/>
+            <column name="division_code" value="HUYEN_TRI_TON_THI_TRAN_CO_TO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-31">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_TAN_TUYEN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Tuyến"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_TAN_TUYEN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995121-32">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TRI_TON_XA_O_LAM'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Ô Lâm"/>
+            <column name="division_code" value="HUYEN_TRI_TON_XA_O_LAM"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TRI_TON')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-33">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_THI_TRAN_NHA_BANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Nhà Bàng"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_THI_TRAN_NHA_BANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-34">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_THI_TRAN_CHI_LANG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Chi Lăng"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_THI_TRAN_CHI_LANG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-35">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_NUI_VOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Núi Voi"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_NUI_VOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-36">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_NHON_HUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Nhơn Hưng"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_NHON_HUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-37">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_AN_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Phú"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_AN_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-38">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_THOI_SON'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Thới Sơn"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_THOI_SON"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-39">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_THI_TRAN_TINH_BIEN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Thị trấn Tịnh Biên"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_THI_TRAN_TINH_BIEN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-40">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_VAN_GIAO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Văn Giáo"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_VAN_GIAO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-41">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_AN_CU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Cư"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_AN_CU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-42">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_AN_NONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Nông"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_AN_NONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-43">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_VINH_TRUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Trung"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_VINH_TRUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-44">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_TAN_LOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Lợi"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_TAN_LOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-45">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_AN_HAO'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã An Hảo"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_AN_HAO"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-46">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'HUYEN_TINH_BIEN_XA_TAN_LAP'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Lập"/>
+            <column name="division_code" value="HUYEN_TINH_BIEN_XA_TAN_LAP"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'HUYEN_TINH_BIEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-47">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_PHUONG_CHAU_PHU_B'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Châu Phú B"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_PHUONG_CHAU_PHU_B"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-48">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_PHUONG_CHAU_PHU_A'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Châu Phú A"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_PHUONG_CHAU_PHU_A"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-49">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_PHUONG_VINH_MY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Vĩnh Mỹ"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_PHUONG_VINH_MY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-50">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_PHUONG_NUI_SAM'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Núi Sam"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_PHUONG_NUI_SAM"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-51">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_PHUONG_VINH_NGUON'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Vĩnh Ngươn"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_PHUONG_VINH_NGUON"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-52">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_XA_VINH_TE'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Tế"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_XA_VINH_TE"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-53">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_CHAU_ĐOC_XA_VINH_CHAU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Châu"/>
+            <column name="division_code" value="THANH_PHO_CHAU_ĐOC_XA_VINH_CHAU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_CHAU_ĐOC')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-54">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_BINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Bình"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_BINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-55">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_LONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Long"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_LONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-56">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_ĐONG_XUYEN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Đông Xuyên"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_ĐONG_XUYEN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-57">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_XUYEN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Xuyên"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_XUYEN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-58">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_BINH_ĐUC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Bình Đức"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_BINH_ĐUC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-59">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_BINH_KHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Bình Khánh"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_BINH_KHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-60">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_PHUOC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Phước"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_PHUOC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-61">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_QUY'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Quý"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_QUY"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-62">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_THOI'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Thới"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_THOI"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-63">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Thạnh"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-64">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_PHUONG_MY_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Mỹ Hòa"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_PHUONG_MY_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-65">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_XA_MY_KHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Khánh"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_XA_MY_KHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-66">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THANH_PHO_LONG_XUYEN_XA_MY_HOA_HUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Mỹ Hoà Hưng"/>
+            <column name="division_code" value="THANH_PHO_LONG_XUYEN_XA_MY_HOA_HUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THANH_PHO_LONG_XUYEN')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-67">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_PHUONG_LONG_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Long Thạnh"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_PHUONG_LONG_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-68">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_PHUONG_LONG_HUNG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Long Hưng"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_PHUONG_LONG_HUNG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-69">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_PHUONG_LONG_CHAU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Long Châu"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_PHUONG_LONG_CHAU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-70">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_PHU_LOC'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Lộc"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_PHU_LOC"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-71">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_VINH_XUONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Xương"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_VINH_XUONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-72">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_VINH_HOA'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Vĩnh Hòa"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_VINH_HOA"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-73">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_TAN_THANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân Thạnh"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_TAN_THANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-74">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_TAN_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Tân An"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_TAN_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-75">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_LONG_AN'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Long An"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_LONG_AN"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-76">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_PHUONG_LONG_PHU'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Long Phú"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_PHUONG_LONG_PHU"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-77">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_CHAU_PHONG'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Châu Phong"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_CHAU_PHONG"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-78">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_PHU_VINH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Phú Vĩnh"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_PHU_VINH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-79">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_XA_LE_CHANH'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Xã Lê Chánh"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_XA_LE_CHANH"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="1669482995122-80">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM location
+                WHERE division_code = 'THI_XA_TAN_CHAU_PHUONG_LONG_SON'
+                  and division_level = 'DISTRICT'
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="location">
+            <column name="division_name" value="Phường Long Sơn"/>
+            <column name="division_code" value="THI_XA_TAN_CHAU_PHUONG_LONG_SON"/>
+            <column name="division_level" value="DISTRICT"/>
+            <column name="division_parent_id"
+                    valueComputed="(select id from location l1 where division_code = 'THI_XA_TAN_CHAU')"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>

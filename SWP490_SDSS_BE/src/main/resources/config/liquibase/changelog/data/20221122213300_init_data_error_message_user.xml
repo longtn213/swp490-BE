@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="longtn" id="202211221443-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'USER_NOT_CUSTOMER';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="USER_NOT_CUSTOMER"/>
+            <column name="return_code" value="400706"/>
+            <column name="message_vi"
+                    value="Người dùng không không phải là khách hàng.Vui lòng kiểm tra lại"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202212032303-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'START_TIME_DOES_NOT_GREATER_THAN_END_TIME';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="START_TIME_DOES_NOT_GREATER_THAN_END_TIME"/>
+            <column name="return_code" value="400801"/>
+            <column name="message_vi"
+                    value="Vui lòng chọn thời gian băt đầu nhỏ hơn thời gian kết thúc"/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+

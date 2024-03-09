@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210211945-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM branch
+                WHERE code = 'SKIN_WISDOM_YEN_LANG';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="branch">
+            <column name="created_by" value="system"/>
+            <column name="created_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="last_modified_by" value="system"/>
+            <column name="last_modified_date" value="2022-10-21 19:45:35.000000"/>
+            <column name="code" value="SKIN_WISDOM_YEN_LANG"/>
+            <column name="name" value="Skin Wisdom Yên Lãng"/>
+            <column name="detail_address" value="15 P.Yên Lãng, Trung Liệt, Đống Đa, Hà Nội"/>
+            <column name="latitude" value="21.0132533"/>
+            <column name="longitude" value="105.8185914"/>
+            <column name="hotline" value="0363769123"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+

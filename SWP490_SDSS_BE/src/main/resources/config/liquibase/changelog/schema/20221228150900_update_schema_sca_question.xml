@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="202212281509-1" author="longtn">
+        <dropColumn tableName="sca_form">
+            <column name="type"/>
+        </dropColumn>
+    </changeSet>
+    <changeSet id="202212281509-2" author="longtn">
+        <addColumn tableName="sca_question">
+            <column name="type" type="BIGINT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="202301281850-5" author="trinhpk">
+        <modifyDataType tableName="branch" columnName="code" newDataType="varchar(500)"/>
+    </changeSet>
+</databaseChangeLog>

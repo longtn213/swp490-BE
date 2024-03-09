@@ -1,0 +1,1472 @@
+[
+  {
+    "id": 19294,
+    "time": "2022-10-29T02:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": true,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19295,
+    "time": "2022-10-29T02:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19296,
+    "time": "2022-10-29T03:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19297,
+    "time": "2022-10-29T03:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19298,
+    "time": "2022-10-29T03:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19299,
+    "time": "2022-10-29T03:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19300,
+    "time": "2022-10-29T04:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19301,
+    "time": "2022-10-29T04:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19302,
+    "time": "2022-10-29T04:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19303,
+    "time": "2022-10-29T04:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19304,
+    "time": "2022-10-29T05:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19305,
+    "time": "2022-10-29T05:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19306,
+    "time": "2022-10-29T05:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19307,
+    "time": "2022-10-29T05:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19308,
+    "time": "2022-10-29T06:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19309,
+    "time": "2022-10-29T06:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19310,
+    "time": "2022-10-29T06:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19311,
+    "time": "2022-10-29T06:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19312,
+    "time": "2022-10-29T07:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19313,
+    "time": "2022-10-29T07:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19314,
+    "time": "2022-10-29T07:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19315,
+    "time": "2022-10-29T07:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19316,
+    "time": "2022-10-29T08:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19317,
+    "time": "2022-10-29T08:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19318,
+    "time": "2022-10-29T08:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19319,
+    "time": "2022-10-29T08:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19320,
+    "time": "2022-10-29T09:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19321,
+    "time": "2022-10-29T09:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19322,
+    "time": "2022-10-29T09:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19323,
+    "time": "2022-10-29T09:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19324,
+    "time": "2022-10-29T10:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19325,
+    "time": "2022-10-29T10:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19326,
+    "time": "2022-10-29T10:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19327,
+    "time": "2022-10-29T10:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19328,
+    "time": "2022-10-29T11:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19329,
+    "time": "2022-10-29T11:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19330,
+    "time": "2022-10-29T11:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19331,
+    "time": "2022-10-29T11:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19332,
+    "time": "2022-10-29T12:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19333,
+    "time": "2022-10-29T12:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19334,
+    "time": "2022-10-29T12:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19335,
+    "time": "2022-10-29T12:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19336,
+    "time": "2022-10-29T13:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19337,
+    "time": "2022-10-29T13:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19338,
+    "time": "2022-10-29T13:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19339,
+    "time": "2022-10-29T13:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19340,
+    "time": "2022-10-29T14:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19341,
+    "time": "2022-10-29T14:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19342,
+    "time": "2022-10-29T14:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": true,
+    "branchId": 1
+  },
+  {
+    "id": 19343,
+    "time": "2022-10-30T02:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": true,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19344,
+    "time": "2022-10-30T02:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19345,
+    "time": "2022-10-30T03:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19346,
+    "time": "2022-10-30T03:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19347,
+    "time": "2022-10-30T03:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19348,
+    "time": "2022-10-30T03:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19349,
+    "time": "2022-10-30T04:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19350,
+    "time": "2022-10-30T04:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19351,
+    "time": "2022-10-30T04:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19352,
+    "time": "2022-10-30T04:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19353,
+    "time": "2022-10-30T05:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19354,
+    "time": "2022-10-30T05:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19355,
+    "time": "2022-10-30T05:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19356,
+    "time": "2022-10-30T05:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19357,
+    "time": "2022-10-30T06:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19358,
+    "time": "2022-10-30T06:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19359,
+    "time": "2022-10-30T06:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19360,
+    "time": "2022-10-30T06:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19361,
+    "time": "2022-10-30T07:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19362,
+    "time": "2022-10-30T07:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19363,
+    "time": "2022-10-30T07:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19364,
+    "time": "2022-10-30T07:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19365,
+    "time": "2022-10-30T08:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19366,
+    "time": "2022-10-30T08:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19367,
+    "time": "2022-10-30T08:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19368,
+    "time": "2022-10-30T08:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19369,
+    "time": "2022-10-30T09:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19370,
+    "time": "2022-10-30T09:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19371,
+    "time": "2022-10-30T09:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19372,
+    "time": "2022-10-30T09:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19373,
+    "time": "2022-10-30T10:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19374,
+    "time": "2022-10-30T10:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19375,
+    "time": "2022-10-30T10:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19376,
+    "time": "2022-10-30T10:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19377,
+    "time": "2022-10-30T11:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19378,
+    "time": "2022-10-30T11:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19379,
+    "time": "2022-10-30T11:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19380,
+    "time": "2022-10-30T11:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19381,
+    "time": "2022-10-30T12:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19382,
+    "time": "2022-10-30T12:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19383,
+    "time": "2022-10-30T12:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19384,
+    "time": "2022-10-30T12:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19385,
+    "time": "2022-10-30T13:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19386,
+    "time": "2022-10-30T13:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19387,
+    "time": "2022-10-30T13:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19388,
+    "time": "2022-10-30T13:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19389,
+    "time": "2022-10-30T14:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19390,
+    "time": "2022-10-30T14:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19391,
+    "time": "2022-10-30T14:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": true,
+    "branchId": 1
+  },
+  {
+    "id": 19392,
+    "time": "2022-10-31T02:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": true,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19393,
+    "time": "2022-10-31T02:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19394,
+    "time": "2022-10-31T03:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19395,
+    "time": "2022-10-31T03:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19396,
+    "time": "2022-10-31T03:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19397,
+    "time": "2022-10-31T03:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19398,
+    "time": "2022-10-31T04:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19399,
+    "time": "2022-10-31T04:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19400,
+    "time": "2022-10-31T04:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19401,
+    "time": "2022-10-31T04:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19402,
+    "time": "2022-10-31T05:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19403,
+    "time": "2022-10-31T05:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19404,
+    "time": "2022-10-31T05:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19405,
+    "time": "2022-10-31T05:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19406,
+    "time": "2022-10-31T06:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19407,
+    "time": "2022-10-31T06:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19408,
+    "time": "2022-10-31T06:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19409,
+    "time": "2022-10-31T06:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19410,
+    "time": "2022-10-31T07:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19411,
+    "time": "2022-10-31T07:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19412,
+    "time": "2022-10-31T07:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19413,
+    "time": "2022-10-31T07:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19414,
+    "time": "2022-10-31T08:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19415,
+    "time": "2022-10-31T08:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19416,
+    "time": "2022-10-31T08:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19417,
+    "time": "2022-10-31T08:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19418,
+    "time": "2022-10-31T09:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19419,
+    "time": "2022-10-31T09:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19420,
+    "time": "2022-10-31T09:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19421,
+    "time": "2022-10-31T09:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19422,
+    "time": "2022-10-31T10:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19423,
+    "time": "2022-10-31T10:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19424,
+    "time": "2022-10-31T10:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19425,
+    "time": "2022-10-31T10:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19426,
+    "time": "2022-10-31T11:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19427,
+    "time": "2022-10-31T11:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19428,
+    "time": "2022-10-31T11:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19429,
+    "time": "2022-10-31T11:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19430,
+    "time": "2022-10-31T12:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19431,
+    "time": "2022-10-31T12:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19432,
+    "time": "2022-10-31T12:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19433,
+    "time": "2022-10-31T12:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19434,
+    "time": "2022-10-31T13:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19435,
+    "time": "2022-10-31T13:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19436,
+    "time": "2022-10-31T13:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19437,
+    "time": "2022-10-31T13:45:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19438,
+    "time": "2022-10-31T14:00:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19439,
+    "time": "2022-10-31T14:15:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": false,
+    "branchId": 1
+  },
+  {
+    "id": 19440,
+    "time": "2022-10-31T14:30:00Z",
+    "maxQty": 14,
+    "bookedQty": 0,
+    "isAvailable": true,
+    "isFirstTimeInDay": false,
+    "isLastTimeInDay": true,
+    "branchId": 1
+  }
+]

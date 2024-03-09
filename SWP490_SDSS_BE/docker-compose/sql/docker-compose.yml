@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ssds-mysql:
+    image: mysql:8.0.31
+    container_name: ssds-mysql
+    volumes:
+      - ./ssds.sql.gz:/docker-entrypoint-initdb.d/init.sql.gz
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=ssds_master
+    ports:
+      - "3309:3306"
+    command: mysqld --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp

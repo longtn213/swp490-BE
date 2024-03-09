@@ -1,0 +1,47 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202210182336-1">
+        <insert tableName="reason_message_type">
+            <column name="code" value="CANCEL"/>
+            <column name="name" value="Hủy"/>
+            <column name="description" value="Loại lý do hủy"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210182336-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM reason_message
+                WHERE code = 'CANCEL_APPOINTMENT_001';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="reason_message">
+            <column name="code" value="CANCEL_APPOINTMENT_001"/>
+            <column name="title" value="Có việc bận"/>
+            <column name="description" value="Có việc bận"/>
+            <column name="type_id"
+                    valueComputed="(select id from reason_message_type where code = 'CANCEL')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202210182336-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM reason_message
+                WHERE code = 'CANCEL_APPOINTMENT_002';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="reason_message">
+            <column name="code" value="CANCEL_APPOINTMENT_002"/>
+            <column name="title" value="Chi phí cao"/>
+            <column name="description" value="Chi phí cao"/>
+            <column name="type_id"
+                    valueComputed="(select id from reason_message_type where code = 'CANCEL')"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

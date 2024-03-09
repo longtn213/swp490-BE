@@ -1,0 +1,90 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202211041059-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'APPOINTMENT_MASTER_NOT_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="APPOINTMENT_MASTER_NOT_EXIST"/>
+            <column name="return_code" value="4001521"/>
+            <column name="message_vi"
+                    value="Lịch hẹn không tồn tại. Vui lòng kiểm tra lại."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211041059-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'PRICE_CHANGED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="PRICE_CHANGED"/>
+            <column name="return_code" value="4001740"/>
+            <column name="message_vi"
+                    value="Giá của các dịch vụ bạn chọn đã thay đổi, vui lòng tải lại trang để cập nhật lại giá dịch vụ."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211251903-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'SPA_SERVICE_CODE_ALREADY_EXIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="SPA_SERVICE_CODE_ALREADY_EXIST"/>
+            <column name="return_code" value="4001302"/>
+            <column name="message_vi"
+                    value="Mã dịch vụ {0} đã tồn tại. Vui lòng chọn mã khác và thử lại."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="trinhpk" id="202212112300-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'TOKEN_EXPIRED';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="TOKEN_EXPIRED"/>
+            <column name="return_code" value="4008001"/>
+            <column name="message_vi" value="Token hết hạn."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202212112300-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM error_message
+                WHERE code = 'TOKEN_INVALID';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="error_message">
+            <column name="code" value="TOKEN_INVALID"/>
+            <column name="return_code" value="4008003"/>
+            <column name="message_vi" value="Token không hợp lệ."/>
+            <column name="message_en" value=""/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

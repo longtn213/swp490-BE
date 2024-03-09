@@ -1,0 +1,573 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202211040949-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'SOI_TU_VAN_DA';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="SOI_TU_VAN_DA"/>
+            <column name="name" value="Soi và tư vấn da"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'SOI_TU_VAN_DA';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="SOI_TU_VAN_DA"/>
+            <column name="name" value="Soi và tư vấn da"/>
+            <column name="description"
+                    value="Sử dụng máy chuyên dụng giúp phân tích chính xác tình trạng da hiện tại, từ đó, kỹ thuật viên sẽ đưa ra các tư vấn phù hợp về các sản phẩm bôi thoa tại nhà cũng như liệu trình nên sử dụng tại Spa"/>
+            <column name="duration" value="30"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="300000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'SOI_TU_VAN_DA')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-3">
+        <renameColumn tableName="price" oldColumnName="name" newColumnName="price"
+                      columnDataType="double"></renameColumn>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'SOI_TU_VAN_DA';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="300000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'SOI_TU_VAN_DA')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM category
+                WHERE code = 'ACNE_SKIN_CARE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="category">
+            <column name="code" value="ACNE_SKIN_CARE"/>
+            <column name="name" value="Chăm sóc da mụn"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_ESSENTIAL_CARE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="ACNE_ESSENTIAL_CARE"/>
+            <column name="name" value="Acne Essential Care"/>
+            <column name="description"
+                    value="Loại bỏ nhân mụn cùng quy trình kháng viêm, làm dịu da độc quyền giúp giảm tình trạng sưng tấy, thâm đỏ thường thấy sau nặn mụn"/>
+            <column name="duration" value="90"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="300000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_ESSENTIAL_CARE';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="300000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'ACNE_ESSENTIAL_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'HYDRA_FACIAL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="HYDRA_FACIAL"/>
+            <column name="name" value="Hydra facial"/>
+            <column name="description"
+                    value="Làm sạch sâu và loại bỏ sợi bã nhờn đồng thời tái cung cấp độ ẩm cho da. Hydra Facial phù hợp với mọi loại da, đặc biệt da mụn nhạy cảm, giúp đem lại bề mặt da thông thoáng, căng ẩm."/>
+            <column name="duration" value="90"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="600000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'HYDRA_FACIAL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="600000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'HYDRA_FACIAL')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040950-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_CHEMICAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="ACNE_CHEMICAL_PEEL"/>
+            <column name="name" value="Acne chemical peel"/>
+            <column name="description"
+                    value="Thay da hóa học sử dụng các loại acid hữu cơ ở nồng độ cao, phù hợp với mọi tình trạng mụn ẩn và viêm. Bên cạnh đó, thay da hóa học còn phòng ngừa tình trạng sẹo và thâm sau mụn hiệu quả."/>
+            <column name="duration" value="120"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="800000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-11">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_CHEMICAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="800000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'ACNE_CHEMICAL_PEEL')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-12">
+        <modifyDataType columnName="description"
+                        newDataType="varchar(2000)"
+                        tableName="service"/>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-13">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'SEBUM_DETOXIFICATION_AND_SKIN_GLOW';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="SEBUM_DETOXIFICATION_AND_SKIN_GLOW"/>
+            <column name="name" value="Sebum Detoxification and Skin Glow"/>
+            <column name="description"
+                    value="Dành riêng cho tình trạng da đổ dầu mất kiểm soát, liệu trình sử dụng gel làm sạch và máy tạo oxy chuyên dụng không chỉ làm sạch hiệu quả mà còn giúp giảm tiết bã nhờn lâu dài. Đặc biệt, liệu trình bao gồm các bước điện di lạnh đẩy dưỡng chất vào sâu trong da, đem lại bề mặt da căng bóng."/>
+            <column name="duration" value="120"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="800000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-14">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'SEBUM_DETOXIFICATION_AND_SKIN_GLOW';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="800000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id"
+                    valueComputed="(select id from service where code = 'SEBUM_DETOXIFICATION_AND_SKIN_GLOW')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-15">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_ADVANCE_TREATMENT';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="ACNE_ADVANCE_TREATMENT"/>
+            <column name="name" value="Acne Advance Treatment"/>
+            <column name="description"
+                    value="Liệu trình trị mụn chuyên biệt được thiết kế riêng cho từng tình trạng da."/>
+            <column name="duration" value="150"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1300000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-16">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_ADVANCE_TREATMENT';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1300000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'ACNE_ADVANCE_TREATMENT')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-17">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_HERBAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="ACNE_HERBAL_PEEL"/>
+            <column name="name" value="Acne Herbal Peel"/>
+            <column name="description"
+                    value="Thay da với tảo biển là hình thức lột da bề mặt giúp cùng lúc hỗ trợ giải quyết hiệu quả tình trạng mụn ẩn dai dẳng và các vên thâm, sạm sau mụn."/>
+            <column name="duration" value="150"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1300000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-18">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'ACNE_HERBAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1300000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'ACNE_HERBAL_PEEL')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-19">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'MICROPOINT_ACNE_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="MICROPOINT_ACNE_MESOTHERAPY"/>
+            <column name="name" value="Micropoint Acne Mesotherapy"/>
+            <column name="description"
+                    value="Cấy tinh chất trị mụn theo vùng mụn giúp điều hòa hoạt động tuyến bã, ngăn ngừa hình thành mụn mới. Meso therapy đồng thời hỗ trợ làm khỏe da, hạn chế hình thành thâm sẹo sau mụn."/>
+            <column name="duration" value="150"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1500000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-20">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'MICROPOINT_ACNE_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1500000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id"
+                    valueComputed="(select id from service where code = 'MICROPOINT_ACNE_MESOTHERAPY')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-21">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'WHOLE_FACE_ACNE_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="WHOLE_FACE_ACNE_MESOTHERAPY"/>
+            <column name="name" value="Whole Face Acne Mesotherapy"/>
+            <column name="description"
+                    value="Cấy tinh chất trị cả mặt giúp điều hòa hoạt động tuyến bã, ngăn ngừa hình thành mụn mới. Meso therapy đồng thời hỗ trợ làm khỏe da, hạn chế hình thành thâm sẹo sau mụn."/>
+            <column name="duration" value="180"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="3200000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-22">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'WHOLE_FACE_ACNE_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="3200000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id"
+                    valueComputed="(select id from service where code = 'WHOLE_FACE_ACNE_MESOTHERAPY')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-23">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'DERMA_MICRONEEDLING';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="DERMA_MICRONEEDLING"/>
+            <column name="name" value="Derma Microneedling"/>
+            <column name="description"
+                    value="Liệu tình phù hợp với tình trạng da thô sần, bít tắc. Lăn kim nông cùng với tinh chất trị mụn chuyên sâu giúp thúc đẩy quá trình thay da mới, giúp bề mặt da sáng mịn."/>
+            <column name="duration" value="150"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1200000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'ACNE_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211040951-24">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'DERMA_MICRONEEDLING';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1200000"/>
+            <column name="start_date" value="2022-10-01 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'DERMA_MICRONEEDLING')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'BRIGHTENING_CHEMICAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="BRIGHTENING_CHEMICAL_PEEL"/>
+            <column name="name" value="Brightening Chemical Peel"/>
+            <column name="description"
+                    value="Thay da hoá học sử dụng các loại acid hữu cơ ở nồng độ cao kết hợp với các hoạt chất làm sáng da tiên tiến như vitamin C,tranexamic acid, peptidé đem lại làn da đều màu, sáng mịn"/>
+            <column name="duration" value="240"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1500000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'MELASMA_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'BRIGHTENING_CHEMICAL_PEEL';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1500000"/>
+            <column name="start_date" value="2022-12-10 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'BRIGHTENING_CHEMICAL_PEEL')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'GLOWING_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="GLOWING_MESOTHERAPY"/>
+            <column name="name" value="Glowing Mesotherapy"/>
+            <column name="description"
+                    value="Trực tiếp đưa hoạt chất làm sáng vào da, giúp phát huy hiệu quả tối ưu các hoạt chất này.Mesotherapy không chỉ giúp làm sáng da mà còn hỗ trợ làm khoẻ và chống lão hoá cũng như đem lại hiệu ứng căng bóng sau liệu trình."/>
+            <column name="duration" value="600"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="3500000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'MELASMA_SKIN_CARE')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-4">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'GLOWING_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="3500000"/>
+            <column name="start_date" value="2022-12-10 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'GLOWING_MESOTHERAPY')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-5">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'NUTRITION_RICH_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="NUTRITION_RICH_MESOTHERAPY"/>
+            <column name="name" value="Nutrition Rich Mesotherapy"/>
+            <column name="description"
+                    value="Sử dụng tính chất với thành phần đậm đặc giàu các nhân tố tăng trưởng và các loại vitamin, khoáng chất, nuôi dưỡng da khoẻ đẹp từ bên trong."/>
+            <column name="duration" value="500"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="2500000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'RESTORE/ANTI_AGING_SKIN')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-6">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'NUTRITION_RICH_MESOTHERAPY';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="2500000"/>
+            <column name="start_date" value="2022-12-10 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'NUTRITION_RICH_MESOTHERAPY')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-7">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'PRP';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="PRP"/>
+            <column name="name" value="PRP"/>
+            <column name="description"
+                    value="PRP thế hệ hai với công nghệ ly tâm lạnh độc đáo, không sử dụng phụ gia chống đông và kích hoạt giúp giảm cảm giác đau buốt khi tiêm đồng thời duy trì và ổn định hàm lượng tiểu cầu cũng như nhân tố tăng trưởng, đem lại hiệu quả tuyệt đối."/>
+            <column name="duration" value="60"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="500000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'RESTORE/ANTI_AGING_SKIN')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-8">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'PRP';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="500000"/>
+            <column name="start_date" value="2022-12-10 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'PRP')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-9">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'LAN_KIM_PHUC_HOI';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="service">
+            <column name="code" value="LAN_KIM_PHUC_HOI"/>
+            <column name="name" value="Lăn Kim Phục Hồi"/>
+            <column name="description"
+                    value="Kỹ thuật viên tư vấn chuyên sâu từng trường hợp cụ thể."/>
+            <column name="duration" value="90"/>
+            <column name="is_active" valueBoolean="true"/>
+            <column name="current_price" value="1000000"/>
+            <column name="category_id" valueComputed="(select id from category where code = 'RESTORE/ANTI_AGING_SKIN')"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtran" id="202212102318-10">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="1">
+                SELECT COUNT(*)
+                FROM service
+                WHERE code = 'LAN_KIM_PHUC_HOI';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="price">
+            <column name="price" value="1000000"/>
+            <column name="start_date" value="2022-12-10 00:00:00"/>
+            <column name="service_id" valueComputed="(select id from service where code = 'LAN_KIM_PHUC_HOI')"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

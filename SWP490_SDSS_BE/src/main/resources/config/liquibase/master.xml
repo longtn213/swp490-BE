@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="floatType" value="float" dbms="mysql"/>
+    <property name="clobType" value="clob" dbms="mysql"/>
+    <property name="blobType" value="longblob" dbms="mysql"/>
+    <property name="uuidType" value="varchar(36)" dbms="mysql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
+
+    <include file="config/liquibase/changelog/schema/20221004161200_init_schema.xml"/>
+    <include file="config/liquibase/changelog/schema/20221006004900_init_schema.xml"/>
+    <include file="config/liquibase/changelog/schema/20221006205300_update_schema.xml"/>
+    <include file="config/liquibase/changelog/data/20221006210000_init_data_category.xml"/>
+    <include file="config/liquibase/changelog/schema/20221006220200_init_schema_error_message.xml"/>
+    <include file="config/liquibase/changelog/data/20221006223600_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221008000300_update_schema_branch.xml"/>
+    <include file="config/liquibase/changelog/schema/20221013181800_init_schema_service.xml"/>
+    <include file="config/liquibase/changelog/data/20221018230300_tenant_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221018231800_init_schema.xml"/>
+    <include file="config/liquibase/changelog/schema/20221018235400_update_schema_reason_message.xml"/>
+    <include file="config/liquibase/changelog/data/20221018233600_init_data_reason_message.xml"/>
+    <include file="config/liquibase/changelog/data/20221021193000_init_schema_branch.xml"/>
+    <include file="config/liquibase/changelog/data/20221021194500_init_data_config.xml"/>
+    <include file="config/liquibase/changelog/data/20221024082500_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221021194100_init_schema_appointment_tracking.xml"/>
+    <include file="config/liquibase/changelog/schema/20221024112800_init_schema_job_execution_params.xml"/>
+    <include file="config/liquibase/changelog/schema/20221027162500_update_schema_form.xml"/>
+    <include file="config/liquibase/changelog/data/20221105102200_init_data_error_message_sca_form.xml"/>
+    <include file="config/liquibase/changelog/data/20221105102200_init_data_error_message_sca_form_duplicate.xml"/>
+    <include file="config/liquibase/changelog/data/20221105102200_init_data_error_message_sca_option.xml"/>
+    <include file="config/liquibase/changelog/data/20221105102200_init_data_error_message_sca_question.xml"/>
+    <include file="config/liquibase/changelog/data/20221027171400_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221026120900_update_schema_appointment_tracking.xml"/>
+    <include file="config/liquibase/changelog/data/20221030155000_tenant_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/data/20221031214300_tenant_init_lookup.xml"/>
+    <include file="config/liquibase/changelog/schema/20221101160600_update_schema_appointment_service.xml"/>
+    <include file="config/liquibase/changelog/data/20221102011700_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/data/20221104094900_init_data_spa_service.xml"/>
+    <include file="config/liquibase/changelog/data/20221104105900_init_data_error_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221106112900_update_schema_appointment_master.xml"/>
+    <include file="config/liquibase/changelog/schema/20221107154100_update_schema_user.xml"/>
+    <include file="config/liquibase/changelog/data/20221107233900_tenant_init_data_role.xml"/>
+    <include file="config/liquibase/changelog/schema/20221109200100_update_schema_question_answer.xml"/>
+    <include file="config/liquibase/changelog/schema/20221114121500_update_schema_file.xml"/>
+    <include file="config/liquibase/changelog/data/20221119121100_tenant_init_data_reason_message.xml"/>
+    <include file="config/liquibase/changelog/schema/20221121104400_update_schema_appointment_master.xml"/>
+    <include file="config/liquibase/changelog/schema/20221125145800_init_schema_file.xml"/>
+    <include file="config/liquibase/changelog/schema/20221126160600_init_schema_location.xml"/>
+    <include file="config/liquibase/changelog/data/20221126162000_init_data_location_state.xml"/>
+    <include file="config/liquibase/changelog/data/20221126171500_init_data_location_city.xml"/>
+    <include file="config/liquibase/changelog/data/20221126200400_init_data_location_city.xml"/>
+    <include file="config/liquibase/changelog/data/20221126212900_init_data_location_city.xml"/>
+    <include file="config/liquibase/changelog/data/20221126213800_init_data_district_ha_noi.xml"/>
+    <include file="config/liquibase/changelog/data/20221127000700_init_data_an_giang_district.xml"/>
+    <include file="config/liquibase/changelog/data/20221127225300_init_data_branch.xml"/>
+    <include file="config/liquibase/changelog/data/20221121174800_init_data_error_message_question_answer.xml"/>
+    <include file="config/liquibase/changelog/data/20221121181200_init_data_error_message_sca_result.xml"/>
+    <include file="config/liquibase/changelog/data/20221122144300_init_data_error_message_user.xml"/>
+    <include file="config/liquibase/changelog/data/20221122213300_init_data_error_message_user.xml"/>
+    <include file="config/liquibase/changelog/schema/20221125155200_update_schema_sca_result.xml"/>
+    <include file="config/liquibase/changelog/schema/20221128102400_init_schema_config_data.xml"/>
+    <include file="config/liquibase/changelog/data/20221128102600_init_data_config_data.xml"/>
+    <include file="config/liquibase/changelog/schema/20221129003300_init_schema_branch.xml"/>
+    <include file="config/liquibase/changelog/data/20221129003300_init_data_branch.xml"/>
+    <include file="config/liquibase/changelog/schema/20221201011700_init_schema_appointment_master.xml"/>
+    <include file="config/liquibase/changelog/schema/20221210192500_drop_table_appt_service_specialist.xml"/>
+    <include file="config/liquibase/changelog/schema/20221210194000_init_schema_user_activity.xml"/>
+    <include file="config/liquibase/changelog/schema/20221213195800_init_schema_appointment_master.xml"/>
+    <include file="config/liquibase/changelog/schema/20221217094000_init_schema_role_permission.xml"/>
+    <include file="config/liquibase/changelog/schema/20221220231800_init_index.xml"/>
+    <include file="config/liquibase/changelog/schema/20221228012400_update_schema_sca_form.xml"/>
+    <include file="config/liquibase/changelog/schema/20221228012400_update_schema_sca_form.xml"/>
+    <include file="config/liquibase/changelog/schema/20221228150900_update_schema_sca_question.xml"/>
+    <include file="config/liquibase/changelog/schema/20221228111600_init_schema_performance_metric.xml"/>
+
+
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

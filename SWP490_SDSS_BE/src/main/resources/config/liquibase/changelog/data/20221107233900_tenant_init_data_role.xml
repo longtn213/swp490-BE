@@ -1,0 +1,66 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet author="trinhpk" id="202211072339-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM role
+                WHERE code = 'MANAGER';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="role">
+            <column name="code" value="MANAGER"/>
+            <column name="name" value="Quản lí"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211072339-2">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM role
+                WHERE code = 'CUSTOMER';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="role">
+            <column name="code" value="CUSTOMER"/>
+            <column name="name" value="Khách hàng"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="trinhpk" id="202211072339-3">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM role
+                WHERE code = 'RECEPTIONIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="role">
+            <column name="code" value="RECEPTIONIST"/>
+            <column name="name" value="Lễ tân"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="longtn" id="202211251516-1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM role
+                WHERE code = 'SPECIALIST';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="role">
+            <column name="code" value="SPECIALIST"/>
+            <column name="name" value="Chuyên viên chăm sóc"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
